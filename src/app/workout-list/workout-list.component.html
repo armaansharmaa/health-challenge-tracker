@@ -25,6 +25,7 @@
   <div class="overflow-x-auto">
     <table
       class="min-w-full bg-white table-auto text-left border-collapse rounded-md shadow-md shadow-neutral-500"
+      *ngIf="paginatedUsers.length > 0"
     >
       <thead>
         <tr>
@@ -49,6 +50,9 @@
         </tr>
       </tbody>
     </table>
+    <div *ngIf="paginatedUsers.length === 0" class="text-center py-10">
+      No users found matching your search criteria.
+    </div>
   </div>
   <div class="mt-8 flex justify-center flex-wrap max-[500px]:flex-col">
     <button
