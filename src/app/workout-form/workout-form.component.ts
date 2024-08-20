@@ -24,6 +24,8 @@ import { WorkoutListComponent } from '../workout-list/workout-list.component';
       workouts.push(this.workout);
       localStorage.setItem('workouts', JSON.stringify(workouts));
       this.router.navigate(['/workout-list']);
+    }else{
+      alert('Please fill out all fields');
     }
   }
 }
